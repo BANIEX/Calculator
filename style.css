@@ -22,6 +22,7 @@ body{
     height: 60px;
     margin: 10px auto;
     border-radius: 5px;
+    position: relative;
     
 }
 .buttons{
@@ -63,4 +64,16 @@ body{
     border-bottom-left-radius: 10px;
     margin-top: 4px;
     
+}
+.question{
+    text-align: right;
+    font-size: larger;
+    width:98%;
+    padding-right: 3px;
+    overflow-y: scroll;
+}
+.answer{
+    text-align: right;
+    font-size: large;
+    padding-right: 3px;
 }

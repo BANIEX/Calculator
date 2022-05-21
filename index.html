@@ -10,36 +10,39 @@
 <body>
     <div class="calculator">
         <div class="screen">
-            <div class="screen_display"></div>
+            <div class="screen_display">
+                <div class="question">5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5+5</div>
+                <div class="answer">50</div>
+            </div>
         </div>
         <div class="buttons">
             <div class="row1">
-                <div class="row1_number" id="seven">7</div>
-                <div class="row1_number" id="eight">8</div>
-                <div class="row1_number" id="nine">9</div>
-                <div class="row1_number" id="addition">+</div>
+                <div class="row1_number" id="seven" onclick="seven()">7</div>
+                <div class="row1_number" id="eight" onclick="eight()">8</div>
+                <div class="row1_number" id="nine" onclick="nine()">9</div>
+                <div class="row1_number" id="addition" onclick="addition()">+</div>
             </div>
             <div class="row2">
-                <div class="row2_number" id="four">4</div>
-                <div class="row2_number" id="five">5</div>
-                <div class="row2_number" id="six">6</div>
-                <div class="row2_number" id="subtraction">-</div>
+                <div class="row2_number" id="four"  onclick="four()">4</div>
+                <div class="row2_number" id="five" onclick="five()">5</div>
+                <div class="row2_number" id="six" onclick="six()">6</div>
+                <div class="row2_number" id="subtraction" onclick="subtraction()">-</div>
             </div>
             <div class="row3">
-                <div class="row3_number" id="one">1</div>
-                <div class="row3_number" id="two">2</div>
-                <div class="row3_number" id="three">3</div>
-                <div class="row3_number" id="multiplication">x</div>
+                <div class="row3_number" id="one" onclick="one()">1</div>
+                <div class="row3_number" id="two" onclick="two()">2</div>
+                <div class="row3_number" id="three" onclick="three()">3</div>
+                <div class="row3_number" id="multiplication" onclick="multiplication()">x</div>
             </div>
             <div class="row4">
-                <div class="row4_number" id="zero">0</div>
-                <div class="row4_number" id="modulus">mod</div>
-                <div class="row4_number" id="integer_division">I.D</div>
-                <div class="row4_number" id="division">/</div>
+                <div class="row4_number" id="zero" onclick="zero()">0</div>
+                <div class="row4_number" id="modulus" onclick="point()">.</div>
+                <div class="row4_number" id="integer_division" onclick="clean_up()">clear</div>
+                <div class="row4_number" id="division" onclick="division()">/</div>
             </div>
 
             <div class="calculate">
-                <div class="calculate_button" id="calculate_button">=</div>
+                <div class="calculate_button" id="calculate_button" onclick="calculate_on()">=</div>
             </div>
         </div>
     </div>
