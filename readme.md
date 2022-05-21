@@ -1,0 +1,1 @@
+calculator must have modulus and integer division
