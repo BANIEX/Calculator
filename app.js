@@ -1,5 +1,4 @@
 let questioninNumbers = ''
-let questioninString = ''
 function one(){
     questioninNumbers += '1'
     document.getElementsByClassName('question')[0].innerText = questioninNumbers 
@@ -61,7 +60,7 @@ function point(){
     document.getElementsByClassName('question')[0].innerText = questioninNumbers 
 }
 function clean_up(){
-    questioninNumbers = ' '
+    questioninNumbers = '0'
     document.getElementsByClassName('question')[0].innerText = questioninNumbers
 
 } 
@@ -71,13 +70,9 @@ function calculate_on(){
     // the code below separates at the sight of non-digits and fullstop(^\d.) (dot)(.), this means regex"/ /" putting it in "( )" means the separators would also be part of the array.
     // alert("1.766+767.23+56-646".split(/([^\d.])/g))
     let b = a.split(/([^\d.])/g)
-    // alert(typeof b)
-    // alert(typeof b[2])
-    alert(b.length)
-    // alert(4 % 2)
     let sign_collector = [];
     let number_collector = []
-    
+    let pre_answer = 0
     for (let i = 0;i < b.length;i++){
 
         
@@ -96,18 +91,59 @@ function calculate_on(){
         else{
             number_collector.push(b[i])
         }
-    
-    
-
-        alert(sign_collector)
-        alert(number_collector)
-        
-
-
-
-
-
     }
+    for (let j = 0; j < number_collector.length-1; j++){
+        for(let k = 0; k < sign_collector.length ; k++){
+            if(j == 0){
+                if(sign_collector[k] == '+' ){
+                    pre_answer = parseFloat(number_collector[j]) + parseFloat(number_collector[j +1]);
+                    sign_collector.shift()
+                    break
+                }
+                if(sign_collector[k] == '-' ){
+                    pre_answer = parseFloat(number_collector[j]) - parseFloat(number_collector[j +1]);
+                    sign_collector.shift()
+                    break
+                }
+                if(sign_collector[k] == 'x' ){
+                    pre_answer = parseFloat(number_collector[j]) * parseFloat(number_collector[j +1]);
+                    sign_collector.shift()
+                    break
+                }
+                if(sign_collector[k] == '/' ){
+                    pre_answer = parseFloat(number_collector[j]) / parseFloat(number_collector[j +1]);
+                    sign_collector.shift()
+                    break
+                }
+
+            }
+            else {
+                if(sign_collector[k] == '+' ){
+                    pre_answer = pre_answer + parseFloat(number_collector[j +1]);
+                    sign_collector.shift()
+                    break
+                }
+                if(sign_collector[k] == '-' ){
+                    pre_answer = pre_answer - parseFloat(number_collector[j +1]);
+                    sign_collector.shift()
+                    break
+                }
+                if(sign_collector[k] == 'x' ){
+                    pre_answer = pre_answer * parseFloat(number_collector[j +1]);
+                    sign_collector.shift()
+                    break
+                }
+                if(sign_collector[k] == '/' ){
+                    pre_answer = pre_answer / parseFloat(number_collector[j +1]);
+                    sign_collector.shift()
+                    break
+                }
+                
+            }
+
+        }
+    }
+    document.getElementsByClassName("answer")[0].innerText = pre_answer
 }
 
 
