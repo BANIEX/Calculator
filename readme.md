@@ -1,4 +1,5 @@
 MARKET CALCULATOR
+
 -This calculator is a demo calculator and should not be used professionally.
 -This calculator strictly solves from left to right and does not obey BODMAS or PEMDAS.
 -The first input of the calculator must be a number and not a sign(+,-,*,/).
@@ -7,4 +8,4 @@ MARKET CALCULATOR
 
 -This calculator is good for you if you are a market person
 
-GO TO TO USE
+GO TO  https://baniex.github.io/Calculator/ TO USE
