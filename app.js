@@ -62,6 +62,7 @@ function point(){
 function clean_up(){
     questioninNumbers = '0'
     document.getElementsByClassName('question')[0].innerText = questioninNumbers
+    document.getElementsByClassName('answer')[0].innerText = questioninNumbers
 
 } 
 
